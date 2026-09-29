@@ -8,10 +8,6 @@ on:
 permissions:
   contents: read
 
-defaults:
-  run:
-    working-directory: ./TronV3.1-final-upload
-
 jobs:
   build-windows:
     name: Build Windows
@@ -40,8 +36,8 @@ jobs:
         with:
           name: TRON-Permission-Control-Windows
           path: |
-            TronV3.1-final-upload/dist/*.exe
-            TronV3.1-final-upload/dist/*.yml
+            dist/*.exe
+            dist/*.yml
           if-no-files-found: error
 
   build-macos:
@@ -71,7 +67,7 @@ jobs:
         with:
           name: TRON-Permission-Control-macOS
           path: |
-            TronV3.1-final-upload/dist/*.dmg
-            TronV3.1-final-upload/dist/*.zip
-            TronV3.1-final-upload/dist/*.yml
+            dist/*.dmg
+            dist/*.zip
+            dist/*.yml
           if-no-files-found: error
